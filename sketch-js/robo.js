@@ -39,6 +39,7 @@ function draw() {
   drawNose(r.noseCenterX, r.noseCenterY);
 
   drawMouth();
+  drawTeeth();
 
   drawHat();
 }
@@ -75,26 +76,32 @@ function drawEars(x, y) {
 }
 
 function drawMouth() {
-  strokeWeight(2);
   stroke(r.black);
+  strokeWeight(3);
   fill(r.white);
   rect(155, 230, 90, 24, 12);
-  strokeCap(SQUARE);
+  noStroke();
+}
+
+function drawTeeth() {
+  stroke(r.black);
   strokeWeight(5);
+  strokeCap(SQUARE);
   line(200, 230, 200, 254);
   line(225, 230, 225, 254);
   line(175, 230, 175, 254);
+  noStroke();
 }
 
 function drawHat() {
-  strokeWeight(4);
   stroke(r.purple);
+  strokeWeight(4);
   fill(r.lilac);
-  arc(r.headCenter, 68, 50, 50, radians(20), radians(160));
+  arc(200, 68, 50, 50, radians(20), radians(160));
 
   noStroke();
   fill(r.orange);
-  ellipse(r.headCenter, 60, 38);
+  ellipse(200, 60, 38);
   fill(r.yellow);
-  arc(r.headCenter, 60, 38, 38, radians(190), radians(350));
+  arc(200, 60, 38, 38, radians(190), radians(350));
 }

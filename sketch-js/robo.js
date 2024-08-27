@@ -38,28 +38,9 @@ function draw() {
 
   drawNose(r.noseCenterX, r.noseCenterY);
 
-  //mouth
-  stroke(r.black);
-  strokeWeight(2);
-  fill(r.white);
-  rect(155, 230, 90, 24, 12);
-  strokeWeight(5);
-  strokeCap(SQUARE);
-  line(200, 230, 200, 254);
-  line(225, 230, 225, 254);
-  line(175, 230, 175, 254);
+  drawMouth();
 
-  //silly hat
-  stroke(r.purple);
-  strokeWeight(4);
-  fill(r.lilac);
-  arc(200, 68, 50, 50, radians(20), radians(160));
-
-  noStroke();
-  fill(r.orange);
-  ellipse(200, 60, 38);
-  fill(r.yellow);
-  arc(200, 60, 38, 38, radians(190), radians(350));
+  drawHat();
 }
 
 function drawHead() {
@@ -91,4 +72,29 @@ function drawEars(x, y) {
   fill(r.red);
   rect(x - 140, y, r.earWidth, r.earHeightSize, r.earRadius);
   rect(x + 120, y, r.earWidth, r.earHeightSize, r.earRadius);
+}
+
+function drawMouth() {
+  strokeWeight(2);
+  stroke(r.black);
+  fill(r.white);
+  rect(155, 230, 90, 24, 12);
+  strokeCap(SQUARE);
+  strokeWeight(5);
+  line(200, 230, 200, 254);
+  line(225, 230, 225, 254);
+  line(175, 230, 175, 254);
+}
+
+function drawHat() {
+  strokeWeight(4);
+  stroke(r.purple);
+  fill(r.lilac);
+  arc(r.headCenter, 68, 50, 50, radians(20), radians(160));
+
+  noStroke();
+  fill(r.orange);
+  ellipse(r.headCenter, 60, 38);
+  fill(r.yellow);
+  arc(r.headCenter, 60, 38, 38, radians(190), radians(350));
 }

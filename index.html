@@ -1,25 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../libraries/p5.js"></script>
     <title>p5 SKB</title>
-</head>
-<body>
-    <h1>p5.js Sketches</h1>
-    <ul>
-        <li><a href="./sketch-pages/sketch1.html">Sketch 1 Monoke</a></li>
-        <li><a href="./sketch-pages/sketch2.html">Sketch 2 Robo</a></li>
-        <li><a href="./sketch-pages/sketch3.html">Sketch 3 Derpy</a></li>
-        <li><a href="./sketch-pages/sketch4.html">Sketch 4 Frog</a></li>
-        <li><a href="./sketch-pages/sketch5.html">Sketch 5 Upside Down Smile</a></li>
-        <li><a href="./sketch-pages/sketch6.html">Sketch 5 House</a></li>
-        <li><a href="./sketch-pages/sketch7.html">Sketch 7 Hands</a></li>
-        <li><a href="./sketch-pages/sketch8.html">Sketch 8 Eyes</a></li>
-        <li><a href="./sketch-pages/sketch9.html">Sketch 9 Scream</a></li>
-        <li><a href="./sketch-pages/sketch10.html">Sketch 10 World</a></li>
-        <li><a href="./sketch-pages/sketch11.html">Sketch 11 Squares</a></li>
-        <li><a href="./sketch-pages/sketch12.html">Sketch 12 Grid Mesh</a></li>
-    </ul>
-</body>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+      .grid-item {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>p5.js SKB</h1>
+
+    <section class="grid-container">
+      <a href="./sketch-pages/sketchSmile.html">
+        <section class="grid-item" id="sketchSmile"></section>
+      </a>
+      <a href="./sketch-pages/sketchHouse.html">
+        <section class="grid-item" id="sketchHouse"></section>
+      </a>
+      <a href="./sketch-pages/sketchHands.html">
+        <section class="grid-item" id="sketchHands"></section>
+      </a>
+      <a href="./sketch-pages/sketchSquares.html">
+        <section class="grid-item" id="sketchSquares"></section>
+      </a>
+      <a href="./sketch-pages/sketchGrid.html">
+        <section class="grid-item" id="sketchGrid"></section>
+      </a>
+      <a href="./sketch-pages/sketchEyes.html">
+        <section class="grid-item" id="sketchEyes"></section>
+      </a>
+      <a href="./sketch-pages/sketchMononoke.html">
+        <section class="grid-item" id="sketchMononoke"></section>
+      </a>
+      <a href="./sketch-pages/sketchWorld.html">
+        <section class="grid-item" id="sketchWorld"></section>
+      </a>
+      <a href="./sketch-pages/sketchDerpy.html">
+        <section class="grid-item" id="sketchDerpy"></section>
+      </a>
+      <a href="./sketch-pages/sketchRobo.html">
+        <section class="grid-item" id="sketchRobo"></section>
+      </a>
+      <a href="./sketch-pages/sketchFrog.html">
+        <section class="grid-item" id="sketchFrog"></section>
+      </a>
+      <a href="./sketch-pages/sketchScream.html">
+        <section class="grid-item" id="sketchScream"></section>
+      </a>
+    </section>
+
+    <script src="../display-sketches/mononoke.js"></script>
+    <script src="../display-sketches/derpy.js"></script>
+    <script src="../display-sketches/squares.js"></script>
+    <script src="../display-sketches/robo.js"></script>
+    <script src="../display-sketches/smile.js"></script>
+    <script src="../display-sketches/frog.js"></script>
+    <script src="../display-sketches/house.js"></script>
+    <script src="../display-sketches/scream.js"></script>
+    <script src="../display-sketches/grid.js"></script>
+    <script src="../display-sketches/world.js"></script>
+    <script src="../display-sketches/hands.js"></script>
+    <script src="../display-sketches/eyes.js"></script>
+  </body>
 </html>

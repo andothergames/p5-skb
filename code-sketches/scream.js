@@ -1,24 +1,24 @@
 let growAmount = 1;
 let isGrowing = true;
+let grad = {
+  grow: 0,
+  sneak: -150,
+};
 
 function setup() {
   createCanvas(400, 400);
   frameRate(30);
   noStroke();
-  colorMode(HSB, 360, 100, 100, 100);
-  background(scream.bgColour);
+  colorMode(RGB, 255);
 }
 
-let gradient = {
-  grow: 0,
-  sneak: -150,
-};
-
 const scream = {
-  bgColour: [320, 50, 100, 100],
-  yellow: [53, 71, 100, 100],
-  darkYellow: [53, 97, 94],
-  blue: [226, 87, 100, 100],
+  bgColour: [244, 232, 250, 255],
+  yellow: [255, 234, 74, 255],
+  darkYellow: [240, 213, 7, 255],
+  blue: [33, 85, 255, 255],
+  black: [0, 0, 0, 255],
+  white: [255, 255, 255, 255],
   faceSize: 200,
   mouthX: 200,
   mouthY: 240,
@@ -27,8 +27,8 @@ const scream = {
 };
 
 function draw() {
+  background(scream.bgColour);
   noStroke();
-
   drawFace(width / 2, height / 2);
   drawEye(160, 180);
   drawEye(240, 180);
@@ -38,24 +38,24 @@ function draw() {
 }
 
 function updateGradient(property, limit) {
-  if (gradient[property] > limit) {
+  if (grad[property] > limit) {
     isGrowing = false;
-  } else if (gradient[property] < 0) {
+  } else if (grad[property] < 0) {
     isGrowing = true;
   }
-  gradient[property] += isGrowing ? growAmount : -growAmount;
+  grad[property] += isGrowing ? growAmount : -growAmount;
 }
 
 function drawFace(x, y) {
-  updateGradient("grow", 225);
+  updateGradient("grow", 250);
   updateGradient("sneak", 75);
 
   push();
   linearGradient(
     x,
-    gradient.sneak,
+    grad.sneak,
     y,
-    gradient.grow,
+    grad.grow,
     color(scream.blue),
     color(scream.yellow)
   );
@@ -64,15 +64,15 @@ function drawFace(x, y) {
 }
 
 function drawEye(x, y) {
-  fill("#fff");
-  stroke("#000");
+  fill(scream.white);
+  stroke(scream.black);
   strokeWeight(1);
   ellipse(x, y, 36, 50);
 }
 
 function drawMouth(x, y) {
   noStroke();
-  fill("#000");
+  fill(scream.black);
   ellipse(x, y, scream.mouthW, scream.mouthH);
 }
 

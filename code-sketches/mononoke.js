@@ -92,7 +92,7 @@ function drawEyebrow(x, y) {
 function drawMouth(x, y, size) {
   fill(m.orange);
   ellipse(x, y, size);
-  
+
   fill(m.black);
   ellipse(x, y, size / 1.6);
 }

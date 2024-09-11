@@ -1,6 +1,6 @@
 const radius = 160;
 const speed = 0.02;
-let angle = 0;
+let worldAngle = 0;
 let time = 0;
 
 let centerX = 200;
@@ -30,7 +30,7 @@ function draw() {
   drawMoon();
   pop();
 
-  angle = angle + speed;
+  worldAngle = worldAngle + speed;
   time += 0.01;
 }
 
@@ -44,7 +44,7 @@ function eartCutOut() {
 
 function drawMoon() {
   translate(centerX, centerY);
-  rotate(angle);
+  rotate(worldAngle);
   fill("#fff");
   ellipse(radius, 0, 20);
 }

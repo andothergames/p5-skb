@@ -1,4 +1,4 @@
-let angle = 0;
+let angleSquares = 0;
 let centerSquareSize = 0.1;
 
 function setup() {
@@ -65,7 +65,7 @@ function draw() {
   drawCircles(color.blue, 4);
   pop();
 
-  angle = angle + -1;
+  angleSquares = angleSquares + -1;
 }
 
 function drawCenterSquare(c) {

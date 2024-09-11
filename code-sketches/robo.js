@@ -27,7 +27,7 @@ const r = {
 
 function draw() {
   noStroke();
-  background("#f0c7ee");
+  background("#02f5f5");
 
   drawHead();
 

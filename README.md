@@ -1,1 +1,3 @@
-a place for refactoring my p5 sketches and then it will become the new p5 skb, with rendered javascript sketches with a code view
+[p5 sketchbook](https://andothergames.github.io/p5-refactor/)
+
+a place for my p5 sketches to live.

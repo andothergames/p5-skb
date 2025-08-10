@@ -3,7 +3,8 @@ let grow = true;
 
 function setup() {
   frameRate(20);
-  createCanvas(400, 400);
+  let cnv = createCanvas(400, 400);
+  cnv.parent('sketch-holder');
 }
 
 const s = {

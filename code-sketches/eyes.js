@@ -6,7 +6,8 @@ let centerY = 200;
 let centerRX = 250;
 
 function setup() {
-  createCanvas(400, 400);
+  let cnv = createCanvas(400, 400);
+  cnv.parent('sketch-holder');
   noStroke();
   colorMode(HSB, 360, 100, 100, 100);
   background(e.bgColour);

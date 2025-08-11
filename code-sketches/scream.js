@@ -6,7 +6,8 @@ let grad = {
 };
 
 function setup() {
-  createCanvas(400, 400);
+  let cnv = createCanvas(400, 400);
+  cnv.parent('sketch-holder');
   frameRate(30);
   noStroke();
   colorMode(RGB, 255);

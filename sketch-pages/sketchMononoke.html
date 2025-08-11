@@ -6,7 +6,24 @@
     <title>Princess Mononoke</title>
     <script src="../libraries/p5.js"></script>
     <script src="../code-sketches/mononoke.js"></script>
+    <script>
+        fetch('../code-sketches/mononoke.js')
+          .then(response => response.text())
+          .then(code => {
+            document.getElementById('code-display').textContent = code;
+          })
+          .catch(err => {
+            document.getElementById('code-display').textContent = 'Error loading code.';
+            console.error(err);
+          });
+      </script>
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
+    <div class="container">
+    <div id="sketch-holder"></div>
+    <pre id="code-display">loading code...</pre>
+    </div>
 </body>
 </html>

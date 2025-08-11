@@ -2,7 +2,8 @@ let angleSquares = 0;
 let centerSquareSize = 0.1;
 
 function setup() {
-  createCanvas(400, 400);
+  let cnv = createCanvas(400, 400);
+  cnv.parent('sketch-holder');
   angleMode(DEGREES);
   rectMode(CENTER);
   ellipseMode(CENTER);

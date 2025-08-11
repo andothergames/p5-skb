@@ -8,7 +8,8 @@ let centerY = 200;
 
 function setup() {
   colorMode(HSB, 360, 100, 100, 100);
-  createCanvas(400, 400);
+  let cnv = createCanvas(400, 400);
+  cnv.parent('sketch-holder');
   noStroke();
 }
 

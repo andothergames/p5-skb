@@ -34,19 +34,28 @@ function draw() {
   drawEar("right", 290);
 
   drawEye("left", 150);
-  drawEyebrow(m.browCenterX, m.browCenterY);
+  drawEyebrow(m.browCenterX,
+    m.browCenterY);
   drawEye("right", 250);
 
-  drawMouth(m.mouthX, m.mouthY, m.mouthSize);
-  drawMoustache(m.moustacheCenterX, m.moustacheCenterY);
+  drawMouth(m.mouthX,
+    m.mouthY,
+    m.mouthSize);
+  drawMoustache(m.moustacheCenterX,
+
+    m.moustacheCenterY);
 }
 
 function drawHead() {
   fill(m.cream);
-  ellipse(m.headCenterX, m.headCenterY, m.headSize * 1.3);
+  ellipse(m.headCenterX,
+    m.headCenterY,
+    m.headSize * 1.3);
 
   fill(m.red);
-  ellipse(m.headCenterX, m.headCenterY, m.headSize);
+  ellipse(m.headCenterX,
+    m.headCenterY,
+    m.headSize);
 }
 
 function drawEar(ear, center) {
@@ -69,24 +78,34 @@ function drawEar(ear, center) {
 
 function drawEye(eye, center) {
   fill(m.orange);
-  ellipse(center, m.eyeHeight, m.eyeSize);
+  ellipse(center,
+    m.eyeHeight,
+    m.eyeSize);
 
   fill(m.black);
-  ellipse(center, m.eyeHeight, m.eyeSize / 1.5);
+  ellipse(center,
+    m.eyeHeight,
+    m.eyeSize / 1.5);
 
   let offsetX = eye === "left" ? -25 : 25;
   let offsetX2 = eye === "left" ? 25 : -25;
 
-  ellipse(center + offsetX, m.eyeHeight - 25, 15);
-  ellipse(center + offsetX2, m.eyeHeight + 20, 12);
+  ellipse(center + offsetX,
+    m.eyeHeight - 25, 15);
+  ellipse(center + offsetX2,
+    m.eyeHeight + 20, 12);
 }
 
 function drawEyebrow(x, y) {
   noFill();
   stroke(m.beige);
   strokeWeight(m.browWidth);
-  bezier(x - 70, y - 60, x - 20, y - 70, x, y, x, y);
-  bezier(x + 70, y - 60, x + 20, y - 70, x, y, x, y);
+  bezier(x - 70, y - 60,
+    x - 20, y - 70,
+    x, y, x, y);
+  bezier(x + 70, y - 60,
+    x + 20, y - 70,
+    x, y, x, y);
   noStroke();
 }
 
@@ -102,8 +121,16 @@ function drawMoustache(x, y) {
   noFill();
   stroke(m.beige);
   strokeWeight(m.moustacheWidth);
-  bezier(x - 90, y + 30, x - 80, y + 40, x - 60, y + 40, x - 40, y + 20);
-  bezier(x - 40, y + 20, x - 20, y, x + 20, y, x + 40, y + 20);
-  bezier(x + 40, y + 20, x + 60, y + 40, x + 70, y + 40, x + 90, y + 30);
+  bezier(x - 90, y + 30,
+    x - 80, y + 40,
+    x - 60, y + 40,
+    x - 40, y + 20);
+  bezier(x - 40, y + 20,
+    x - 20, y, x + 20,
+    y, x + 40, y + 20);
+  bezier(x + 40, y + 20,
+    x + 60, y + 40,
+    x + 70, y + 40,
+    x + 90, y + 30);
   noStroke();
 }

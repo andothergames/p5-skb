@@ -40,7 +40,9 @@ function draw() {
 
 function drawFace(x, y) {
   push();
-  linearGradient(200, 75, 200, 325, color(e.yellow), color(e.warmYellow));
+  linearGradient
+    (200, 75, 200, 325,
+      color(e.yellow), color(e.warmYellow));
   ellipse(x, y, e.faceW);
   pop();
 }
@@ -57,7 +59,7 @@ function drawEye(x, y) {
   fill(e.black);
   ellipse(eyeRadius, 0, e.pupilSize);
   pop();
-  
+
   angle = angle + speed;
 }
 
@@ -68,8 +70,9 @@ function drawMouth(x, y) {
 }
 
 function linearGradient(nx, ny, sx, sy, colorN, colorS) {
-  let gradient = drawingContext.createLinearGradient(nx, ny, sx, sy);
-  gradient.addColorStop(0, colorN);
-  gradient.addColorStop(1, colorS);
-  drawingContext.fillStyle = gradient;
+  let g = drawingContext.createLinearGradient
+  (nx, ny, sx, sy);
+  g.addColorStop(0, colorN);
+  g.addColorStop(1, colorS);
+  drawingContext.fillStyle = g;
 }

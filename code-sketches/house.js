@@ -56,7 +56,11 @@ function drawHouse() {
 function drawBase(x, y) {
   fill(h.colour);
   noStroke();
-  rect(width / 2 - 100, height / 2, h.houseW, height / 2.5);
+  rect
+    (width / 2 - 100,
+      height / 2,
+      h.houseW,
+      height / 2.5);
 }
 
 function drawRoof() {
@@ -69,7 +73,11 @@ function drawRoof() {
     width / 2 + 120,
     height / 2
   );
-  rect(width / 2 - 80, height / 2 - 40, h.chimneyW, h.chimneyH);
+  rect
+    (width / 2 - 80,
+      height / 2 - 40,
+      h.chimneyW,
+      h.chimneyH);
 }
 
 function drawDoor(x, y) {
@@ -100,7 +108,9 @@ function drawWindow(x, y) {
 function drawWindows() {
   let numberOfWindows = 3;
   for (let i = 0; i < numberOfWindows; i++) {
-    drawWindow(h.houseW - 62.5 + i * (h.windowSize + 12.5), height / 2 + 50);
+    drawWindow
+      (h.houseW - 62.5 + i * (h.windowSize + 12.5),
+      height / 2 + 50);
   }
 }
 
@@ -113,11 +123,21 @@ function drawGrass() {
 function drawBiggerBush(x, y) {
   fill(h.grassColour);
   noStroke();
-  arc(x, y, h.bushW, h.bushH, radians(180), radians(360));
+  arc
+    (x,
+      y,
+      h.bushW,
+      h.bushH,
+      radians(180),
+      radians(360));
 }
 
 function drawSmallerBush(x, y) {
-  arc(x, y, h.bushW - 10, h.bushH - 6, radians(180), radians(360));
+  arc
+  (x, y, h.bushW - 10,
+    h.bushH - 6,
+    radians(180),
+    radians(360));
 }
 
 function drawSmoke() {

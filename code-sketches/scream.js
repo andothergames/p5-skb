@@ -1,4 +1,4 @@
-let growAmount = 1;
+let growAm = 1;
 let isGrowing = true;
 let grad = {
   grow: 0,
@@ -44,7 +44,7 @@ function updateGradient(property, limit) {
   } else if (grad[property] < 0) {
     isGrowing = true;
   }
-  grad[property] += isGrowing ? growAmount : -growAmount;
+  grad[property] += isGrowing ? growAm : -growAm;
 }
 
 function drawFace(x, y) {
@@ -85,9 +85,12 @@ function drawHand(x, y, dir) {
   line(x, y, x + 40 * c1, y + 33);
 }
 
-function linearGradient(nx, ny, sx, sy, colorN, colorS) {
-  let gradient = drawingContext.createLinearGradient(nx, ny, sx, sy);
-  gradient.addColorStop(0, colorN);
-  gradient.addColorStop(1, colorS);
-  drawingContext.fillStyle = gradient;
+function linearGradient(nx, ny,
+  sx, sy,
+  colorN, colorS) {
+  let g = drawingContext.createLinearGradient
+    (nx, ny, sx, sy);
+  g.addColorStop(0, colorN);
+  g.addColorStop(1, colorS);
+  drawingContext.fillStyle = g;
 }

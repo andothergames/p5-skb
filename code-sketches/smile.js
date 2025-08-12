@@ -34,8 +34,20 @@ function draw() {
 function heart(x, y, size) {
   beginShape();
   vertex(x, y);
-  bezierVertex(x - size / 2, y - size / 2, x - size, y + size / 3, x, y + size);
-  bezierVertex(x + size, y + size / 3, x + size / 2, y - size / 2, x, y);
+  bezierVertex
+    (x - size / 2,
+      y - size / 2,
+      x - size,
+      y + size / 3,
+      x,
+      y + size);
+  bezierVertex
+    (x + size,
+      y + size / 3,
+      x + size / 2,
+      y - size / 2,
+      x,
+      y);
   endShape(CLOSE);
 }
 
@@ -51,11 +63,23 @@ function drawEyes() {
   fill(s.eyeColour);
   stroke(s.pupilColour);
   strokeWeight(s.eyeWeight);
-  ellipse(s.midw - 60, s.midh - 10, s.eyeSize);
-  ellipse(s.midw + 60, s.midh - 10, s.eyeSize);
+  ellipse
+    (s.midw - 60,
+      s.midh - 10,
+      s.eyeSize);
+  ellipse
+    (s.midw + 60,
+      s.midh - 10,
+      s.eyeSize);
   fill(s.pupilColour);
-  ellipse(s.midw - 60, s.midh - 10, s.eyeSize - 10);
-  ellipse(s.midw + 60, s.midh - 10, s.eyeSize - 10);
+  ellipse
+    (s.midw - 60,
+      s.midh - 10,
+      s.eyeSize - 10);
+  ellipse
+    (s.midw + 60,
+      s.midh - 10,
+      s.eyeSize - 10);
 }
 
 function drawSmile() {

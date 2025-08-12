@@ -37,14 +37,23 @@ function draw() {
 
 function drawFace(x, y) {
   push();
-  linearGradient(x, 75, y, 325, color(h.yellow), color(h.lightYellow));
+  linearGradient
+    (x, 75,
+      y, 325,
+      color(h.yellow),
+      color(h.lightYellow));
   ellipse(width / 2, height / 2, h.faceW);
   pop();
 }
 
 function drawCheek(x, y) {
   push();
-  radialGradient(x, y, 0, x, y, 30, color(h.blushInner), color(h.blushOuter));
+  radialGradient
+    (x, y,
+      0, x,
+      y, 30,
+      color(h.blushInner),
+      color(h.blushOuter));
   ellipse(x, y, h.blushW);
   pop();
 }
@@ -53,14 +62,23 @@ function drawEye(x, y) {
   noFill();
   strokeWeight(h.featureWeight);
   stroke(h.blue);
-  arc(x, y, h.eyeW, h.eyeH, radians(180), radians(0), OPEN);
+  arc(x, y,
+    h.eyeW, h.eyeH,
+    radians(180),
+    radians(0),
+    OPEN);
 }
 
 function drawMouth(x, y) {
   noFill();
   strokeWeight(h.featureWeight);
   stroke(h.blue);
-  arc(x, y, h.smileW, h.smileH, radians(0), radians(180), OPEN);
+  arc(x, y,
+    h.smileW,
+    h.smileH,
+    radians(0),
+    radians(180),
+    OPEN);
 }
 
 function drawHand(x, y, dir) {
@@ -74,23 +92,35 @@ function drawHand(x, y, dir) {
   //fingers
   strokeWeight(14);
   stroke(h.yellow);
-  line(x + 20 * c1, y - 15, x + 20 * c1, y - 44);
-  line(x + 5 * c1, y - 20, x + 10 * c2, y - 58);
-  line(x + 10 * c2, y - 17, x + 35 * c2, y - 55);
-  line(x + 20 * c2, y - 5, x + 45 * c2, y - 32);
-  line(x + 20 * c2, y + 7, x + 50 * c2, y - 6);
+  line(x + 20 * c1, y - 15,
+    x + 20 * c1, y - 44);
+  line(x + 5 * c1, y - 20,
+    x + 10 * c2, y - 58);
+  line(x + 10 * c2, y - 17,
+    x + 35 * c2, y - 55);
+  line(x + 20 * c2, y - 5,
+    x + 45 * c2, y - 32);
+  line(x + 20 * c2, y + 7,
+    x + 50 * c2, y - 6);
 }
 
-function linearGradient(nx, ny, sx, sy, colorN, colorS) {
-  let gradient = drawingContext.createLinearGradient(nx, ny, sx, sy);
-  gradient.addColorStop(0, colorN);
-  gradient.addColorStop(1, colorS);
-  drawingContext.fillStyle = gradient;
+function linearGradient(nx, ny,
+  sx, sy,
+  colorN, colorS) {
+  let g = drawingContext.createLinearGradient
+    (nx, ny, sx, sy);
+  g.addColorStop(0, colorN);
+  g.addColorStop(1, colorS);
+  drawingContext.fillStyle = g;
 }
 
-function radialGradient(nx, ny, nr, sx, sy, sr, colorN, colorS) {
-  let gradient = drawingContext.createRadialGradient(nx, ny, nr, sx, sy, sr);
-  gradient.addColorStop(0, colorN);
-  gradient.addColorStop(1, colorS);
-  drawingContext.fillStyle = gradient;
+function radialGradient(nx, ny,
+  nr, sx,
+  sy, sr,
+  colorN, colorS) {
+  let g = drawingContext.createRadialGradient
+    (nx, ny, nr, sx, sy, sr);
+  g.addColorStop(0, colorN);
+  g.addColorStop(1, colorS);
+  drawingContext.fillStyle = g;
 }

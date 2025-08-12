@@ -53,13 +53,24 @@ function drawEye(x, y) {
 function drawHead() {
   fill(f.green);
   rect(150, 120, 100, 200);
-  arc(150, 220, 180, 200, radians(90), radians(270));
-  arc(250, 220, 180, 200, radians(270), radians(90));
+  arc(150, 220,
+    180, 200,
+    radians(90), radians(270));
+  arc(250, 220,
+    180, 200,
+    radians(270), radians(90));
   fill(f.yellow);
   rect(150, 220, 100, 100);
-  arc(150, 220, 180, 200, radians(90), radians(180));
-  arc(250, 220, 180, 200, radians(0), radians(90));
-  bezier(130, 220, 180, 190, 220, 190, 270, 220);
+  arc(150, 220,
+    180, 200,
+    radians(90), radians(180));
+  arc(250, 220,
+    180, 200,
+    radians(0), radians(90));
+  bezier(130, 220,
+    180, 190,
+    220, 190,
+    270, 220);
 }
 
 function drawEyes() {

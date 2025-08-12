@@ -1,0 +1,6 @@
+next things to focus on
+- look into prism.js or highlight.js for formatting <pre> tagged code
+- add in nav????, home, about, next sketch button?
+- styling (hover, pre padding, responsive grid)
+- refactor sketches (teeth in derpy etc)
+- update readme with screenshots and skb image
